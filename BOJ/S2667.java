@@ -14,31 +14,30 @@ public class S2667 {
 	
 	static int[][] map;
 	static boolean[][] visited;
-	static int count;  // ÁıÀÇ ¼ö
-	static ArrayList<Integer> result;  // ÁıÀÇ ¼ö¸¦ ´ã´Â ¸®½ºÆ®
+	static int count;  // ì§‘ì˜ ìˆ˜
+	static ArrayList<Integer> result;  // ì§‘ì˜ ìˆ˜ë¥¼ ë‹´ëŠ” ë¦¬ìŠ¤íŠ¸
 	
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		// Scanner ´ë½Å BufferedReader »ç¿ë
+		// Scanner ëŒ€ì‹  BufferedReader ì‚¬ìš©
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
 		map = new int[N][N];
 		visited = new boolean[N][N];
 		
-		// ¹è¿­ °ª ÀÔ·Â
+		// ë°°ì—´ ê°’ ì…ë ¥
 		for (int i=0; i<N; i++) {
 			String str = br.readLine();
 			for (int j=0; j<N; j++) {
-				// ÀÔ·Â°ª¿¡ °ø¹éÀÌ ¾ø±â ¶§¹®¿¡ charAtÀ¸·Î ÇÑ ±ÛÀÚ¾¿ °¡Á®¿Í¼­ getNumericValue·Î intÇüÀ¸·Î º¯È¯
+				// ì…ë ¥ê°’ì— ê³µë°±ì´ ì—†ê¸° ë•Œë¬¸ì— charAtìœ¼ë¡œ í•œ ê¸€ìì”© ê°€ì ¸ì™€ì„œ getNumericValueë¡œ intí˜•ìœ¼ë¡œ ë³€í™˜
 				map[i][j] = Character.getNumericValue(str.charAt(j));
 			}
 		}
 		
 		result = new ArrayList<>();
-		// Å½»ö
+		// íƒìƒ‰
 		for (int i=0; i<N; i++) {
 			for (int j=0; j<N; j++) {
-				// ÁıÀÌ ÀÖ°í ¹æ¹®ÇÏÁö ¾ÊÀº °æ¿ì
+				// ì§‘ì´ ìˆê³  ë°©ë¬¸í•˜ì§€ ì•Šì€ ê²½ìš°
 				if(map[i][j] == 1 && !visited[i][j]) {
 					count = 1;
 					dfs(i, j);
@@ -47,7 +46,7 @@ public class S2667 {
 			}
 		}
 		
-		// ¸®½ºÆ® Á¤·Ä
+		// ë¦¬ìŠ¤íŠ¸ ì •ë ¬
 		Collections.sort(result);
 		System.out.println(result.size());
 		for (int i=0; i < result.size(); i++)

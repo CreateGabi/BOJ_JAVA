@@ -1,9 +1,10 @@
 package BOJ;
 
-// ¹ÙÀÌ³Ê¸® ÀÎµ¦½º Æ®¸® ÀÌ¿ë
+//ë°”ì´ë„ˆë¦¬ ì¸ë±ìŠ¤ íŠ¸ë¦¬ ì´ìš©
 public class G2042 {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
 	}
 

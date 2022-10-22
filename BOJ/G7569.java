@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class G7569 {
-	// ÁÂÇ¥
+	// ì¢Œí‘œ
 	public static class Tomato2 {
 		int z, y, x;
 		
@@ -34,7 +34,7 @@ public class G7569 {
 		arr = new int[H][N][M];
 		q = new LinkedList<Tomato2>();
 				
-		// ¹è¿­ ÀÔ·Â
+		// ë°°ì—´ ìž…ë ¥
 		for (int i=0; i<H; i++) {
 			for (int j=0; j<N; j++) {
 				for (int k=0; k<M; k++) {
@@ -52,7 +52,7 @@ public class G7569 {
 		while (!q.isEmpty()) {
 			Tomato2 t = q.poll();
 			
-			// ÀÍÀº Åä¸¶Åä ±âÁØÀ¸·Î ÁÖº¯¿¡ ¾ÈÀÍÀº Åä¸¶Åä¸¦ ÀÍÀº Åä¸¶Åä·Î º¯°æ
+			// ìµì€ í† ë§ˆí†  ê¸°ì¤€ìœ¼ë¡œ ì£¼ë³€ì— ì•ˆìµì€ í† ë§ˆí† ë¥¼ ìµì€ í† ë§ˆí† ë¡œ ë³€ê²½
 			for (int i=0; i<6; i++) {
 				int nz = t.z + dz[i];
 				int ny = t.y + dy[i];
@@ -68,7 +68,7 @@ public class G7569 {
 			}
 		}
 		
-		// ³¯Â¥
+		// ë‚ ì§œ
 		int max = 0;
 		for (int i=0; i<H; i++) {
 			for (int j=0; j<N; j++) {
