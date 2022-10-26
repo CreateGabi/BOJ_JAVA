@@ -15,24 +15,24 @@ public class S10972 {
 		for (int i = 0; i < N; i++)
 			arr[i] = sc.nextInt();
 		
-		if (nextPermutation(arr, N)) {
+		if (nextPermutation()) {
 			for (int i : arr) {
 				System.out.print(i + " ");
 			}
 		}
 		else
-			System.out.println("-1");
+			System.out.print("-1");
 	}
 
-	public static boolean nextPermutation(int[] a, int n) {
-		int i = n-1;
-		while (i > 0 && a[i-1] >= a[i]) i-= 1;
+	public static boolean nextPermutation() {
+		int i = N-1;
+		while (i > 0 && arr[i-1] >= arr[i]) i-= 1;
 		if (i <= 0) return false; // 마지막 순열
 		
-		int j = n-1;
-		while (a[j] <= a[i-1]) j-=1;
+		int j = N-1;
+		while (arr[j] <= arr[i-1]) j-=1;
 		swap(i-1, j);
-		j = n-1;
+		j = N-1;
 		while (i < j) {
 			swap(i, j);
 			i += 1;
